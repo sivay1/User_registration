@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Dashboard</h1>
+    <style>
+    #tx,#tx1{
+      color:darkgreen;
+      float: right;
+    }
+    a{
+      
+      color: darkblue;
+      text-decoration: underline;
+      
+    }
+
+  </style>
+<nav>
+<span id ="tx1"><a href="{%url 'logout'%}" >Logout</a></span>
+<span id ="tx" >Hello, {{request.user}}</span>
+</nav>
+<nav > 
+  <span>Uploaded profile picture 
+    {%if data.profile_picture%}
+        <img src="{{ data.profile_picture.url }}" alt="{{ data.username }}'s Profile Picture">
+    {%endif%}
+  </span>
+</nav> 
+{%if data%}
+<ul>
+		<li><strong>First name:</strong>{{data.first_name}}</li>
+		<li><strong>Last name:</strong>{{data.last_name}}</li>
+		<li><strong>Address:</strong>{{data.address_line}}</li>
+		<li><strong>City:</strong>{{data.city}}</li>
+		<li><strong>State:</strong>{{data.state}}</li>
+		<li><strong>Pincode:</strong>{{data.pincode}}</li>
+</ul>
+
+{%endif%}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

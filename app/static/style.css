@@ -1,0 +1,46 @@
+/* style.css */
+
+#box {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+#fname,
+#lname,
+#username,
+#img,
+#address,
+#city,
+#state,
+#pin,
+#email,
+#pass1,
+#pass2 {
+    margin-bottom: 15px;
+}
+
+#butt {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#butt:hover {
+    background-color: darkblue;
+}
+
+.mt {
+    margin-top: 15px;
+}
+
+.mt2 {
+    text-decoration: none;
+    color: green;
+}
